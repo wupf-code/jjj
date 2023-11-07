@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>breedList</title>
+</head>
+<body>
+<h2  style="text-align: center; margin-top: 20px">配种记录</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>时间</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="breed: ${breeds}">
+        <td th:text="${breed.id}"></td>
+        <td th:text="${breed.date}"></td>
+    </tr>
+    </tbody>
+</table>
+<div th:if="${identify eq '配种人员'}" style="text-align: center;">
+<a th:href="@{/breed/add/{id}(id=${id})}"  style="margin: 0 auto;" class="btn btn-primary">增加</a>
+</div>
+<!-- 引入Layui JavaScript -->
+<script src="https://cdn.staticfile.org/layui/2.6.8/layui.js"></script>
+<!-- 引入Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+<!-- 引入Layui CSS -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/layui/2.6.8/css/layui.css">
+<link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.staticfile.org/layui/2.6.8/layui.js"></script>
+<!-- 引入Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+<!-- 引入Layui CSS -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/layui/2.6.8/css/layui.css">
+<link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>居中的表格</title>
+    <style>
+        /* 自定义样式 */
+        .center-table {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="margin-top: 5%">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>容量</th>
+                <th>已使用</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="house: ${houses}">
+                <td th:text="${house.name}"></td>
+                <td th:text="${house.capacity}"></td>
+                <td th:text="${house.occupied}"></td>
+            </tr>
+            <!-- 添加更多行和数据 -->
+            </tbody>
+        </table>
+</div>
+
+</body>
+</html>

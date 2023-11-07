@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>奶牛信息管理</title>
+
+</head>
+<body>
+
+<!-- 页面内容 -->
+<!-- 示例：使用Layui的表格组件 -->
+<table class="table table-bordered table-striped">
+    <!-- 表头 -->
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>入厂日期</th>
+        <th>牛舍编号</th>
+        <th>状态</th>
+        <th>奶牛质量</th>
+        <th>饲料配方</th>
+        <th>饲料数量</th>
+        <th>配种信息</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <!-- 表体 -->
+    <tbody>
+    <!-- 使用Thymeleaf模板引擎来动态渲染数据 -->
+    <tr th:each="cow : ${cows}">
+        <td th:text="${cow.name}"></td>
+        <td th:text="${cow.date}"></td>
+        <td th:text="${cow.house}"></td>
+        <td th:text="${cow.age}"></td>
+        <td th:text="${cow.level}"></td>
+        <td th:text="${cow.food}"></td>
+        <td th:text="${cow.foodCount}"></td>
+        <td th:text="${cow.breed}"></td>
+        <td>
+            <a th:href="@{/cow/find/{id}(id=${cow.name})}"  class="btn btn-primary">查看</a>
+            <a th:href="@{/cow/edit/{id}(id=${cow.name})}" class="btn btn-success">编辑</a>
+            <a th:if="${identify eq '牛舍管理员'}" th:href="@{/cow/delete/{id}(id=${cow.name})}"  class="btn btn-danger">删除</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- 引入Layui JavaScript -->
+<script src="https://cdn.staticfile.org/layui/2.6.8/layui.js"></script>
+<!-- 引入Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+<!-- 引入Layui CSS -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/layui/2.6.8/css/layui.css">
+<link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+
+</body>
+</html>

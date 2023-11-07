@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo</title>
+    <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
+    <link href="//unpkg.com/layui@2.8.18/dist/css/layui.css" rel="stylesheet">
+</head>
+<body>
+<style>
+    .demo-reg-container{width: 320px; margin: 21px auto 0;}
+    .demo-reg-other .layui-icon{position: relative; display: inline-block; margin: 0 2px; top: 2px; font-size: 26px;}
+</style>
+<div class="layui-container login-container">
+    <div class="login-box">
+        <h2>Register</h2>
+<form class="layui-form" action="/register" method="post">
+    <div class="demo-reg-container">
+        <div class="layui-form-item">
+            <div class="layui-input-wrap">
+                <div class="layui-input-prefix">
+                    <i class="layui-icon layui-icon-vercode"></i>
+                </div>
+                <input type="text" name="username" value="" lay-verify="required" placeholder="用户名" lay-reqtext="请填写用户名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-wrap">
+                <div class="layui-input-prefix">
+                    <i class="layui-icon layui-icon-password"></i>
+                </div>
+                <input type="password" name="password" value="" lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input" id="reg-password" lay-affix="eye">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-wrap">
+                <div class="layui-input-prefix">
+                    <i class="layui-icon layui-icon-password"></i>
+                </div>
+                <input type="password" name="confirmPassword" value="" lay-verify="required|confirmPassword" placeholder="确认密码" autocomplete="off" class="layui-input" lay-affix="eye">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-wrap">
+            <select id="identity" name="identity">
+                <option value="牛犊采买员">牛犊采买员</option>
+                <option value="饲料管理员">饲料管理员</option>
+                <option value="牛舍管理员">牛舍管理员</option>
+                <option value="配种人员">配种人员</option>
+                <option value="挤奶员">挤奶员</option>
+            </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <input type="checkbox" name="agreement" lay-verify="required" lay-skin="primary" title="同意">
+            <a href="#terms" target="_blank" style="position: relative; top: 6px; left: -15px;">
+                <ins>用户协议</ins>
+            </a>
+        </div>
+        <div class="layui-form-item">
+            <div id="error-message" style="color: red;" th:if="${error}">Error: <span th:text="${error}"></span></div>
+        </div>
+        <div class="layui-form-item">
+            <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="demo-reg">注册</button>
+        </div>
+        <div class="layui-form-item demo-reg-other">
+            <label>社交账号注册</label>
+            <span style="padding: 0 21px 0 6px;">
+        <a href="javascript:;"><i class="layui-icon layui-icon-login-qq" style="color: #3492ed;"></i></a>
+        <a href="javascript:;"><i class="layui-icon layui-icon-login-wechat" style="color: #4daf29;"></i></a>
+        <a href="javascript:;"><i class="layui-icon layui-icon-login-weibo" style="color: #cf1900;"></i></a>
+      </span>
+            <a href="/">登录已有帐号</a>
+        </div>
+    </div>
+</form>
+    </div>
+</div>
+
+<!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
+<script src="//unpkg.com/layui@2.8.18/dist/layui.js"></script>
+
+
+</body>
+</html>
+
+
+<style>
+    /* 页面整体居中 */
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*background-color: #f2f2f2; !* 背景颜色，根据需要自行调整 *!*/
+        /*background: rgba(255, 255, 255, 0); !* 使用rgba设置背景颜色和透明度 *!*/
+    }
+
+    /* 登录容器居中 */
+    .login-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        /*background: rgba(255, 255, 255, 0.5); !* 使用rgba设置背景颜色和透明度 *!*/
+    }
+
+    /* 登录框样式 */
+    .login-box {
+        background-color: #ffffff; /* 登录框背景颜色，根据需要自行调整 */
+        border: 1px solid #e0e0e0; /* 边框样式，根据需要自行调整 */
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影样式，根据需要自行调整 */
+        text-align: center;
+    }
+
+    .login-box h2 {
+        margin-top: 0;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    /* 表单字段样式，根据需要自行调整 */
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 图像将保持其纵横比并填充整个父元素 */
+    }
+    html {
+        background-image: url('/imgs/R.png');
+        background-size: cover; /* 自适应屏幕大小 */
+        background-repeat: no-repeat;
+    }
+</style>

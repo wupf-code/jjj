@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layout 管理界面大布局示例 - Layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//cdn.staticfile.org/layui/2.8.18/css/layui.css" rel="stylesheet">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo layui-hide-xs layui-bg-black">JJJ</div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item layui-hide layui-show-sm-inline-block">
+                <a href="javascript:;" th:text="${user.name}">
+                    <img src="//unpkg.com/outeres@0.0.10/img/layui/icon-v2.png" class="layui-nav-img">
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a th:href="@{/signOut}">Sign out</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-more-vertical"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li  class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">奶牛信息管理</a>
+                    <dl class="layui-nav-child">
+                        <dd th:if="${user.identify eq '牛舍管理员' or user.identify eq '牛犊采买员'}"><a th:href="@{/cow/addCow}" target="iframeMain">奶牛入库信息</a></dd>
+                        <dd><a th:href="@{cow/cowList}" target="iframeMain">奶牛列表</a></dd>
+                    </dl>
+                </li>
+<!--                <li th:if="${user.identify eq '牛舍管理员'}" class="layui-nav-item">-->
+                <li  th:if="${user.identify eq '牛舍管理员'}" class="layui-nav-item">
+                    <a href="javascript:;">牛舍管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a th:href="@{/house/addCowHouse}" target="iframeMain">添加牛舍信息</a></dd>
+                        <dd><a th:href="@{/house/findList}" target="iframeMain">牛舍列表</a></dd>
+<!--                        <dd><a href="javascript:;">超链接</a></dd>-->
+                    </dl>
+                </li>
+                <li  th:if="${user.identify eq '牛舍管理员' or user.identify eq '饲料管理员'}" class="layui-nav-item">
+                    <a href="javascript:;">饲料管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a th:href="@{/food/addFood}" target="iframeMain">添加饲料信息</a></dd>
+                        <dd><a th:href="@{/food/findList}" target="iframeMain">饲料库存</a></dd>
+<!--                        <dd><a th:href="@{/food/editFood}" target="iframeMain">修改饲料信息</a></dd>-->
+                        <!--                        <dd><a href="javascript:;">超链接</a></dd>-->
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px; height: 100%;" >
+            <blockquote class="layui-elem-quote layui-text" STYLE="text-align: center">
+                奶牛养殖管理系统
+            </blockquote>
+            <div class="layui-panel" style="height: 88%">
+                <iframe th:src="@{/welcome}"   name="iframeMain"
+                        style="width: 100%; height:100%;"></iframe>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        <h2 style="text-align: center">Power by jjj</h2>
+    </div>
+</div>
+
+<script src="//cdn.staticfile.org/layui/2.8.18/layui.js"></script>
+</body>
+</html>
