@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" modified="2023-11-07T14:05:36.381Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="jOvUcI53OOZbTRKaDBNQ" version="22.0.8" type="github">
+  <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
+    <mxGraphModel dx="1552" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LP4vskP2csmI5X-VgGHz-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="LP4vskP2csmI5X-VgGHz-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="130" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="LP4vskP2csmI5X-VgGHz-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="130" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="LP4vskP2csmI5X-VgGHz-1" target="LP4vskP2csmI5X-VgGHz-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-1" value="牛养殖管理系统" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-2" value="牛犊采买员" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-3" value="饲料管理员" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-4" value="牛舍管理员" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-5" value="配种人员" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-6" value="挤奶员" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="LP4vskP2csmI5X-VgGHz-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="130" as="sourcePoint" />
+            <mxPoint x="100" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.427;entryY=-0.079;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="LP4vskP2csmI5X-VgGHz-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="130" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-17" value="记录购置牛犊信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-18" value="查看产奶量" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-19" value="评价奶牛" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-21" value="查看奶牛饲料" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-22" value="设置饲料投放" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-23" value="购置新饲料" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-24" value="查看饲料信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-25" value="编辑奶牛信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-26" value="记录奶牛信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-27" value="查看奶牛信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-28" value="添加配种记录" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-29" value="查看奶牛信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LP4vskP2csmI5X-VgGHz-30" value="记录挤奶信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="320" width="40" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
