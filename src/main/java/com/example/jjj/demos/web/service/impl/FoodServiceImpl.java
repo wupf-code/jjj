@@ -43,4 +43,9 @@ public class FoodServiceImpl implements FoodService {
     public Food getById(Integer id) {
         return foodMapper.selectById(id);
     }
+
+    @Override
+    public int deleteById(Integer id) {
+        return foodMapper.deleteById(id);
+    }
 }

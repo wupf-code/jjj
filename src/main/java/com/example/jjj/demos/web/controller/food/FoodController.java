@@ -58,4 +58,10 @@ public class FoodController {
         foodService.update(food);
         return "redirect:/food/findList";
     }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Integer id) {
+        foodService.deleteById(id);
+        return "redirect:/food/findList";
+    }
 }

@@ -12,4 +12,6 @@ public interface FoodService {
     Food getByName(String name);
 
     Food getById(Integer id);
+
+    int deleteById(Integer id);
 }

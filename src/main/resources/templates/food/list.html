@@ -39,7 +39,7 @@
             <td th:text="${house.count}"></td>
             <td>
             <a th:href="@{/food/edit/{id}(id=${house.id})}" class="btn btn-success">修改库存</a>
-            <a th:href="@{/cow/delete/{id}(id=${house.id})}"  class="btn btn-danger">删除</a>
+            <a th:href="@{/food/delete/{id}(id=${house.id})}"  class="btn btn-danger">删除</a>
             </td>
         </tr>
         <!-- 添加更多行和数据 -->
